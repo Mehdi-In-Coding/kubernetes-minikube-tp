@@ -13,7 +13,9 @@ spec:
         app: myservice
     spec:
       containers:
-        - image: efrei/myservice:1
+        - name: myservice
+          image: mehdibenayed9/tp1:2
           imagePullPolicy: IfNotPresent
-          name: myservice
+          ports:
+            - containerPort: 8080
       restartPolicy: Always
